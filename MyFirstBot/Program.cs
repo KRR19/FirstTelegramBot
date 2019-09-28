@@ -40,11 +40,7 @@ namespace MyFirstBot
                     foreach(var update in updates)
                     {
                         var message = update.Message;
-                        //if(message.Text == "MyFirstBot")
-                        //{
-                        //    Console.WriteLine("Получено сообщение");
-                        //    await bot.SendTextMessageAsync(message.Chat.Id, "Привет создатель, я твой бот");
-                        //}
+                       
                         switch (message.Text)
                         {
                             case "привет":
@@ -55,9 +51,11 @@ namespace MyFirstBot
                                 break;
                             
                         offset = update.Id+1;
+                        }
                     }
-                }
+                }            
             }
+                
             catch(Exception ex)
             {
                 Console.WriteLine("Error:" + ex);
